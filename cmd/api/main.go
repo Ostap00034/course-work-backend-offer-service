@@ -24,9 +24,9 @@ func init() {
 }
 
 func main() {
-	dbString, ok := os.LookupEnv("DB_CONN_STRING")
+	dbString, ok := os.LookupEnv("OFFER_DB_CONN_STRING")
 	if !ok {
-		log.Fatal("DB_CONN_STRING is not set")
+		log.Fatal("OFFER_DB_CONN_STRING is not set")
 	}
 	client := db.NewClient(dbString)
 	defer client.Close()
